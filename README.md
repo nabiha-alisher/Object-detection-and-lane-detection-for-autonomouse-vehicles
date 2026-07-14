@@ -137,9 +137,9 @@ Required files:
 
 Download:
 
-> Google Drive Link Here
+> [Google Drive Link Here](https://drive.google.com/file/d/1DY13nr8brxRBJUdySYhS2zZEFS6Xg9P1/view?usp=sharing)
 
-https://drive.google.com/file/d/1DY13nr8brxRBJUdySYhS2zZEFS6Xg9P1/view?usp=sharing
+
 
 ## Triton Model Repository
 
