@@ -83,10 +83,11 @@ The following files must be downloaded separately.
 
 ## Weights
 
-Place inside:
+Create weights folder and place  .pth  files inside :
 
 ```
-weights/
+mkdir weights
+cd weights/
 ```
 
 Required files:
