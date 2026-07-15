@@ -1,0 +1,47 @@
+# FYP AI Traffic Assistance Pipeline
+# Python dependencies for the repository code.
+# Recommended base image for final RunPod/Triton testing:
+# nvcr.io/nvidia/tritonserver:24.05-py3
+#
+# Notes:
+# - NVIDIA driver, CUDA runtime, TensorRT runtime, and tritonserver are expected
+#   to be provided by the NVIDIA/RunPod container, not installed only through pip.
+# - Keep NumPy pinned to 1.26.4 because PyCUDA/TensorRT bindings in the tested
+#   environment were built against the NumPy 1.x ABI.
+# - PyTorch CUDA wheels are installed from the extra index below.
+
+--extra-index-url https://download.pytorch.org/whl/cu124
+
+numpy==1.26.4
+pandas==2.2.2
+opencv-python-headless>=4.10.0,<5
+Pillow>=10.0,<12
+matplotlib>=3.8,<4
+tqdm>=4.66,<5
+PyYAML>=6.0,<7
+scipy>=1.11,<2
+
+# Dashboard / API
+fastapi==0.115.6
+uvicorn[standard]==0.32.1
+python-multipart>=0.0.9,<1
+
+# Triton client libraries used by HTTP and gRPC profiler/pipeline variants
+tritonclient[http,grpc]==2.46.0
+grpcio>=1.60,<2
+protobuf>=4.25,<6
+
+# Model/export/runtime support
+onnx==1.16.2
+onnxruntime-gpu==1.18.0
+ultralytics==8.3.253
+
+# PyTorch CUDA build used for the locked RunPod environment
+# If your selected RunPod image already includes PyTorch, verify the version first.
+torch==2.6.0+cu124
+torchvision==0.21.0+cu124
+
+# TensorRT/PyCUDA note:
+# TensorRT 10.0.1 and PyCUDA were present in the tested RunPod environment.
+# If missing, install them according to the NVIDIA container/CUDA version.
+# Avoid upgrading NumPy above 1.26.4 after installing PyCUDA.
