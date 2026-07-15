@@ -220,11 +220,7 @@ The following files are intentionally excluded from GitHub:
 - *.onnx
 - *.pth
 - *.pt
-- videos
-- logs
-- output folders
-- datasets
-- checkpoints
+
 
 These files can be downloaded from the provided Google Drive links.
 
