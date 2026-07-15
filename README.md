@@ -232,7 +232,7 @@ These files can be downloaded from the provided Google Drive links.
 
 ## Authors
 
-Nabiha Khalid
+Nabiha Khalid , Muhammad Faraz Malik ,Saqib Sader
 
 Final Year Project
 
